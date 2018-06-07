@@ -1,0 +1,9 @@
+services:
+ code_samples.redirect:
+   class: Drupal\code_samples\EventSubscriber\RedirectSample
+   tags:
+     - { name: event_subscriber }
+ code_samples.expiration:
+   class: Drupal\code_samples\Access\ExpirationSample
+   tags:
+     - { name: access_check, applies_to: _permission }
